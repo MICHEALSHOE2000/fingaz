@@ -1,0 +1,1 @@
+import Link from 'next/link';import {solutions} from '@/lib/data';export default function Page(){return <main className="section"><div className="container"><h1>Solutions</h1><div className="grid grid3">{solutions.map(s=><Link className="card" href={`/solutions/${s.slug}`} key={s.slug}><h2>{s.title}</h2><p className="muted">{s.summary}</p></Link>)}</div></div></main>}

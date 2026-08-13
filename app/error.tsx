@@ -1,0 +1,1 @@
+'use client';export default function Error({reset}:{reset:()=>void}){return <main className="section"><div className="container"><h1>Something went wrong</h1><button className="btn primary" onClick={reset}>Try again</button></div></main>}
