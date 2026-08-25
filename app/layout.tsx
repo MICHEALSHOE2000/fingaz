@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import './compat.css';
 import './premium.css';
+import './detail.css';
 import {Footer,Navbar} from '@/components/ui';
 
 export const metadata:Metadata={
