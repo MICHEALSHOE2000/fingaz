@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import './compat.css';
+import './premium.css';
 import {Footer,Navbar} from '@/components/ui';
 
 export const metadata:Metadata={
@@ -9,8 +10,8 @@ export const metadata:Metadata={
  description:'Enterprise networking, wireless connectivity, CCTV, access control and technology procurement from Computer Village, Ikeja, Lagos, Nigeria.',
  keywords:['networking equipment Lagos','enterprise networking Nigeria','wireless access point Nigeria','CCTV equipment Lagos','network infrastructure company Nigeria','router supplier Lagos'],
  alternates:{canonical:'/'},
- openGraph:{siteName:'Fingaz Concept Technologies Ltd',type:'website',locale:'en_NG',title:'Fingaz Concept Technologies Ltd | Connectivity. Infrastructure. Security.',description:'Enterprise networking, wireless connectivity, surveillance and technology procurement for businesses across Nigeria.'},
- twitter:{card:'summary_large_image',title:'Fingaz Concept Technologies Ltd',description:'Connectivity. Infrastructure. Security.'},
+ openGraph:{siteName:'Fingaz Concept Technologies Ltd',type:'website',locale:'en_NG',title:'Fingaz Concept Technologies Ltd | Connectivity. Infrastructure. Security.',description:'Enterprise networking, wireless connectivity, surveillance and technology procurement for businesses across Nigeria.',images:[{url:'https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?auto=format&fit=crop&q=85&w=1600',width:1600,height:900,alt:'Enterprise technology infrastructure'}]},
+ twitter:{card:'summary_large_image',title:'Fingaz Concept Technologies Ltd',description:'Connectivity. Infrastructure. Security.',images:['https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?auto=format&fit=crop&q=85&w=1600']},
  robots:{index:true,follow:true}
 };
 
