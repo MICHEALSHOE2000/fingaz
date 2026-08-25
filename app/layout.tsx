@@ -3,6 +3,7 @@ import './globals.css';
 import './compat.css';
 import './premium.css';
 import './detail.css';
+import './user-images.css';
 import {Footer,Navbar} from '@/components/ui';
 
 export const metadata:Metadata={
