@@ -1,3 +1,20 @@
-import type {Metadata} from 'next';import './globals.css';import {Footer,Navbar} from '@/components/ui';
-export const metadata:Metadata={metadataBase:new URL('https://fingazconcept.com'),title:{default:'Fingaz Concept Technologies Ltd | Connectivity. Infrastructure. Security.',template:'%s | Fingaz Concept'},description:'Technology infrastructure, networking, wireless connectivity, security, surveillance and IT hardware in Ikeja, Lagos.',openGraph:{siteName:'Fingaz Concept Technologies Ltd',type:'website'}};
-export default function RootLayout({children}:{children:React.ReactNode}){const json={ '@context':'https://schema.org','@type':'LocalBusiness',name:'Fingaz Concept Technologies Ltd',address:'Suite 26, No. 5 Adepele Street, Computer Village, Ikeja, Lagos, Nigeria',telephone:['08175916034','08113829826'],email:'fingazconcept@gmail.com'};return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(json)}}/><Navbar/>{children}<Footer/></body></html>}
+import type {Metadata} from 'next';
+import './globals.css';
+import {Footer,Navbar} from '@/components/ui';
+
+export const metadata:Metadata={
+ metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'https://fingaztech.netlify.app'),
+ title:{default:'Fingaz Concept Technologies Ltd | Networking & Infrastructure Lagos',template:'%s | Fingaz Concept Technologies'},
+ description:'Enterprise networking, wireless connectivity, CCTV, access control and technology procurement from Computer Village, Ikeja, Lagos, Nigeria.',
+ keywords:['networking equipment Lagos','enterprise networking Nigeria','wireless access point Nigeria','CCTV equipment Lagos','network infrastructure company Nigeria','router supplier Lagos'],
+ alternates:{canonical:'/'},
+ openGraph:{siteName:'Fingaz Concept Technologies Ltd',type:'website',locale:'en_NG',title:'Fingaz Concept Technologies Ltd | Connectivity. Infrastructure. Security.',description:'Enterprise networking, wireless connectivity, surveillance and technology procurement for businesses across Nigeria.'},
+ twitter:{card:'summary_large_image',title:'Fingaz Concept Technologies Ltd',description:'Connectivity. Infrastructure. Security.'},
+ robots:{index:true,follow:true}
+};
+
+export default function RootLayout({children}:{children:React.ReactNode}){const schema={
+ '@context':'https://schema.org','@graph':[
+ {'@type':'Organization','@id':'https://fingaztech.netlify.app/#organization',name:'Fingaz Concept Technologies Ltd',email:'fingazconcept@gmail.com',telephone:['+2348175916034','+2348113829826'],address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}},
+ {'@type':'LocalBusiness','@id':'https://fingaztech.netlify.app/#localbusiness',name:'Fingaz Concept Technologies Ltd',description:'Networking, connectivity, security and technology infrastructure company in Computer Village, Ikeja, Lagos.',email:'fingazconcept@gmail.com',telephone:'+2348175916034',address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}}
+ ]};return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><Navbar/>{children}<Footer/></body></html>}
