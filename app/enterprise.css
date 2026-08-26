@@ -1,0 +1,270 @@
+/* Enterprise art-direction layer
+   Keeps existing information architecture and components intact while pushing the visual system
+   toward a restrained, editorial infrastructure brand. */
+
+:root{
+  --enterprise-ink:#07111b;
+  --enterprise-ink-2:#0b1825;
+  --enterprise-paper:#f7f8fa;
+  --enterprise-blue:#1769ff;
+  --enterprise-cyan:#7bdfff;
+  --enterprise-line:rgba(7,17,27,.12);
+  --enterprise-soft-line:rgba(255,255,255,.14);
+}
+
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--enterprise-ink);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+/* Header: cleaner, more architectural and less template-like. */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:80;
+  background:rgba(255,255,255,.82)!important;
+  backdrop-filter:saturate(150%) blur(18px);
+  -webkit-backdrop-filter:saturate(150%) blur(18px);
+  border-bottom:1px solid rgba(7,17,27,.08)!important;
+}
+.navin{transition:height .28s ease}
+.brand{font-weight:850;letter-spacing:-.07em}
+.brand span{color:var(--enterprise-blue)}
+.links>a,.navlink{font-size:13px;font-weight:650;letter-spacing:-.015em}
+.links .btn{margin-left:4px}
+.mega{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(22px)}
+.megaGrid>div:first-child{max-width:440px}
+.megaGrid h3{font-size:clamp(31px,3vw,46px);line-height:1;letter-spacing:-.05em;margin:.4em 0}
+.megaLinks a{font-size:14px}
+.mobilePanel{background:rgba(255,255,255,.97)!important;backdrop-filter:blur(18px)}
+.mobileLinks>a:not(.btn){font-size:28px;letter-spacing:-.045em;font-weight:700}
+
+/* Editorial headings */
+.overline,.eyebrow{font-weight:700;letter-spacing:.16em!important}
+.sectionHead h2,.pageHero h1,.ctaGrid h2,.premiumProcurement h2{letter-spacing:-.06em!important;text-wrap:balance}
+.sectionHead>p,.sectionHead>div>p,.heroCopy,.procurementContent>p,.ctaGrid p{max-width:680px}
+
+/* Hero refinement: stronger depth without neon/glow gimmicks. */
+.premiumHero{border-bottom:1px solid rgba(255,255,255,.06)}
+.heroMedia:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(2,9,16,.03) 58%,rgba(2,9,16,.38) 100%);
+  pointer-events:none;
+}
+.heroContent{padding-top:8px}
+.hero h1{font-weight:760;text-wrap:balance;text-shadow:0 3px 28px rgba(0,0,0,.18)}
+.heroPanel{position:relative;overflow:hidden}
+.heroPanel:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:2px;
+  background:linear-gradient(90deg,var(--enterprise-blue),var(--enterprise-cyan),transparent 72%);
+}
+.heroPanelFoot div+div{border-left:1px solid rgba(255,255,255,.1);padding-left:15px}
+.heroProof{font-weight:560}
+
+/* Credibility strip: understated enterprise wordmarks rather than loud logo badges. */
+.brandStrip .container{display:grid;grid-template-columns:minmax(210px,.9fr) 2fr;align-items:center;gap:38px}
+.brandStrip .container>div{display:grid;grid-template-columns:repeat(6,1fr);align-items:center;gap:12px}
+.brandStrip strong{text-align:center;font-size:15px!important;filter:grayscale(1);transition:opacity .2s ease,transform .2s ease}
+.brandStrip strong:hover{opacity:1;transform:translateY(-2px)}
+
+/* Infrastructure mosaic: crisp editorial geometry. */
+.visualMosaic{gap:12px!important}
+.visualStack{gap:12px!important}
+.visualCard{border:1px solid rgba(7,17,27,.05)}
+.visualCard:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+  pointer-events:none;
+}
+.visualCopy b svg,.textLink svg,.solutionRow>svg{transition:transform .25s ease}
+.visualCard:hover .visualCopy b svg,.textLink:hover svg,.solutionRow:hover>svg{transform:translateX(5px)}
+
+/* Product showcase */
+.hardwareShowcase{align-items:stretch}
+.hardwareCard{position:relative;overflow:hidden;border:1px solid var(--enterprise-line)}
+.hardwareWhite{background:#f7f8f9}
+.hardwareDark,.securityMini{background:var(--enterprise-ink)}
+.hardwareMedia img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.hardwareCard:hover .hardwareMedia img{transform:scale(1.025)}
+.hardwareCopy h3{letter-spacing:-.045em;text-wrap:balance}
+
+/* Solution rows: make each row feel like a catalogue/specification index. */
+.premiumRows .solutionRow{position:relative;isolation:isolate}
+.premiumRows .solutionRow:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(23,105,255,.09),transparent 72%);
+  opacity:0;
+  z-index:-1;
+  transition:opacity .24s ease;
+}
+.premiumRows .solutionRow:hover:before{opacity:1}
+.premiumRows .solutionRow h3{letter-spacing:-.04em}
+
+/* Product catalogue cards remain secondary to editorial product showcases. */
+.productCard{border-radius:0!important}
+.productVisual{aspect-ratio:4/3}
+.productBody h3{letter-spacing:-.04em}
+
+/* Why Fingaz */
+.premiumWhy{position:relative}
+.premiumWhy:before{
+  content:"FINGAZ / IKEJA / LAGOS";
+  position:absolute;
+  right:clamp(20px,5vw,80px);
+  top:42px;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.22em;
+  color:#8995a1;
+}
+.trustPoint{transition:background .22s ease}
+.trustPoint:hover{background:#f8fafc}
+.trustPoint h3{letter-spacing:-.035em}
+
+/* Corporate procurement: a premium RFQ destination. */
+.premiumProcurement{box-shadow:0 42px 100px rgba(3,13,23,.15)}
+.procurementImage:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.procurementContent{align-self:center}
+.premiumProcurement .procurementList{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--enterprise-soft-line)}
+.premiumProcurement .procurementList div{padding:16px 0;position:relative}
+.premiumProcurement .procurementList div:before{content:"+";margin-right:10px;color:var(--enterprise-cyan)}
+
+/* Process line: horizontal on desktop, vertical on mobile. */
+.workflow{position:relative;overflow:hidden}
+.workflow:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:73px;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,var(--enterprise-blue) 0 27%,rgba(7,17,27,.12) 27% 100%);
+  transform-origin:left;
+  animation:workflowLine 1.4s cubic-bezier(.2,.7,.2,1) both;
+}
+.workflow article{position:relative;background:transparent}
+.workflow article span{display:inline-grid;place-items:center;position:relative;z-index:2;width:36px;height:36px;background:#f8f9fa;border:1px solid rgba(7,17,27,.13)}
+.workflow article:first-child span{background:var(--enterprise-blue);border-color:var(--enterprise-blue);color:#fff}
+@keyframes workflowLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* Industries: photographic architectural tiles without changing existing content/data. */
+.industryGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:10px!important;border:0!important}
+.industryGrid article{
+  min-height:390px!important;
+  border:0!important;
+  overflow:hidden;
+  color:#fff;
+  isolation:isolate;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.industryGrid article:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:inherit;
+  background-position:center;
+  background-size:cover;
+  transition:transform .65s cubic-bezier(.2,.7,.2,1);
+}
+.industryGrid article:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(2,9,16,.06) 25%,rgba(2,9,16,.9) 100%);
+  transition:background .3s ease;
+}
+.industryGrid article:hover{background-color:transparent!important}
+.industryGrid article:hover:before{transform:scale(1.045)}
+.industryGrid article:hover:after{background:linear-gradient(180deg,rgba(2,9,16,.16),rgba(2,9,16,.95))}
+.industryGrid article:nth-child(1){background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(2){background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(3){background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(4){background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(5){background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(6){background-image:url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article:nth-child(7){background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=82&w=1100')}
+.industryGrid article span{color:#c9d6df!important;font-size:10px;letter-spacing:.15em}
+.industryGrid article h3{margin-top:12px!important;font-size:clamp(25px,2.4vw,34px)!important;letter-spacing:-.045em}
+.industryGrid article p{color:#d3dde4!important;line-height:1.6;max-height:0;opacity:0;overflow:hidden;transform:translateY(8px);transition:max-height .35s ease,opacity .3s ease,transform .3s ease}
+.industryGrid article:hover p{max-height:120px;opacity:1;transform:translateY(0)}
+.industryGrid article>svg{opacity:1!important;color:#fff}
+
+/* CTA + footer: strong closing statement and substantial information architecture. */
+.ctaBand{border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.ctaBand:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--enterprise-blue),transparent);
+  opacity:.55;
+}
+.ctaGrid h2{max-width:1000px!important}
+.footer{background:#030a11!important;color:#fff;border-top:0!important}
+.footerGrid{padding-bottom:70px}
+.footerGrid>div:not(.footerIntro)>b{text-transform:uppercase;font-size:10px;letter-spacing:.16em;color:#8ea2b5}
+.footerGrid a{color:#c6d1da;transition:color .2s ease,transform .2s ease}
+.footerGrid a:hover{color:#fff;transform:translateX(3px)}
+.footerIntro>p:first-of-type{font-size:clamp(38px,4vw,58px)!important;line-height:.95;letter-spacing:-.055em}
+.footerMuted{max-width:360px;color:#8599aa!important;line-height:1.65}
+.footerBottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;padding-bottom:30px;color:#788b9b;font-size:11px}
+
+/* Motion: restrained and accessibility-safe. */
+@media (prefers-reduced-motion:no-preference){
+  .visualCard,.hardwareCard,.trustPoint,.industryGrid article,.productCard{will-change:transform}
+  .btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+}
+
+@media(max-width:1080px){
+  .brandStrip .container{grid-template-columns:1fr;gap:20px}
+  .brandStrip .container>div{grid-template-columns:repeat(3,1fr)}
+  .industryGrid{grid-template-columns:repeat(2,1fr)!important}
+  .industryGrid article{min-height:340px!important}
+}
+
+@media(max-width:760px){
+  html{scroll-behavior:auto}
+  .navin{height:68px!important}
+  .mobileLinks{padding-top:26px;padding-bottom:34px}
+  .heroContent{padding-top:0}
+  .hero h1{text-wrap:balance}
+  .brandStrip .container>div{grid-template-columns:repeat(2,1fr);row-gap:20px}
+  .brandStrip strong{text-align:left}
+  .premiumWhy:before{display:none}
+  .premiumProcurement .procurementList{grid-template-columns:1fr}
+  .workflow{padding-left:8px}
+  .workflow:before{left:25px;top:0;width:1px;height:100%;background:linear-gradient(180deg,var(--enterprise-blue) 0 27%,rgba(7,17,27,.12) 27% 100%);animation:workflowLineY 1.3s cubic-bezier(.2,.7,.2,1) both}
+  .workflow article{padding-left:58px!important}
+  .workflow article span{position:absolute;left:0;top:28px}
+  .workflow h3{margin-top:0!important}
+  .industryGrid{grid-template-columns:1fr!important;gap:8px!important}
+  .industryGrid article{min-height:310px!important}
+  .industryGrid article p{max-height:120px;opacity:1;transform:none}
+  .footer{padding-top:70px!important}
+}
+
+@keyframes workflowLineY{from{transform:scaleY(0);transform-origin:top}to{transform:scaleY(1);transform-origin:top}}
+
+@media(prefers-reduced-motion:reduce){
+  .workflow:before{animation:none!important}
+  .industryGrid article:before,.industryGrid article p{transition:none!important}
+}
