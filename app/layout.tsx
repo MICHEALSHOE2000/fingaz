@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import './compat.css';
 import './premium.css';
+import './enterprise.css';
 import './detail.css';
 import './user-images.css';
 import {Footer,Navbar} from '@/components/ui';
