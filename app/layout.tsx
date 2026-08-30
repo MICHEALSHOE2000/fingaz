@@ -6,6 +6,7 @@ import './enterprise.css';
 import './detail.css';
 import './user-images.css';
 import {Footer,Navbar} from '@/components/ui';
+import {contact} from '@/lib/data';
 
 export const metadata:Metadata={
  metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'https://fingaztech.netlify.app'),
@@ -20,6 +21,6 @@ export const metadata:Metadata={
 
 export default function RootLayout({children}:{children:React.ReactNode}){const schema={
  '@context':'https://schema.org','@graph':[
- {'@type':'Organization','@id':'https://fingaztech.netlify.app/#organization',name:'Fingaz Concept Technologies Ltd',email:'fingazconcept@gmail.com',telephone:['+2348175916034','+2348113829826'],address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}},
- {'@type':'LocalBusiness','@id':'https://fingaztech.netlify.app/#localbusiness',name:'Fingaz Concept Technologies Ltd',description:'Networking, connectivity, security and technology infrastructure company in Computer Village, Ikeja, Lagos.',email:'fingazconcept@gmail.com',telephone:'+2348175916034',address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}}
+ {'@type':'Organization','@id':'https://fingaztech.netlify.app/#organization',name:'Fingaz Concept Technologies Ltd',email:contact.email,telephone:['+2348038027800','+2348175916034'],address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}},
+ {'@type':'LocalBusiness','@id':'https://fingaztech.netlify.app/#localbusiness',name:'Fingaz Concept Technologies Ltd',description:'Networking, connectivity, security and technology infrastructure company in Computer Village, Ikeja, Lagos.',email:contact.email,telephone:'+2348038027800',address:{'@type':'PostalAddress',streetAddress:'Suite 26, No. 5 Adepele Street, Computer Village',addressLocality:'Ikeja',addressRegion:'Lagos',addressCountry:'NG'}}
  ]};return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><Navbar/>{children}<Footer/></body></html>}
