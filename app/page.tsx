@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {ArrowRight,Building2,CheckCircle2,ClipboardCheck,Headphones,MapPin,Phone,Send,ShieldCheck,Truck,Wifi} from 'lucide-react';
+import {ArrowRight,Building2,CheckCircle2,Headphones,Phone,Send,ShieldCheck,Truck} from 'lucide-react';
 import {BrandStrip,ProductGrid} from '@/components/ui';
 import {contact,industries,products,solutions,whatsapp} from '@/lib/data';
 import {userImages} from '@/lib/user-images';

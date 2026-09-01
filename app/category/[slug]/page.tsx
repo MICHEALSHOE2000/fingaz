@@ -7,6 +7,9 @@ import {categories,products,CategorySlug} from '@/lib/data';
 const categoryCopy:Record<CategorySlug,string>={
  wireless:'Access points, LTE routers and wireless infrastructure selected around coverage, users and site conditions.',
  networking:'Routers, switches and gateway hardware for reliable LAN, internet and cabinet deployments.',
+ 'networking-accessories':'Fibre and copper networking accessories selected against device compatibility, speed, connector and link requirements.',
+ 'network-switches':'PoE network switching options for CCTV, wireless access points, IP phones and business networks.',
+ 'power-solutions':'Compact backup power options for compatible routers, modems, ONTs and other low-voltage networking devices.',
  security:'IP CCTV and surveillance hardware planned with storage, PoE and facility coverage in mind.',
  'access-control':'Access-control hardware conversations for offices, facilities and managed properties.',
  'computer-accessories':'Structured cabling, accessories and supporting hardware for clean infrastructure projects.'
