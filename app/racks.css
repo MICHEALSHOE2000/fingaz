@@ -1,0 +1,67 @@
+/* Rack collection and final premium storefront refinements. */
+body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+::selection{background:#1769ff;color:#fff}
+.navin{height:78px}
+.btn{border-radius:4px}
+.featuredCategory{grid-column:span 2;grid-template-columns:270px 1fr;background:linear-gradient(135deg,#fff,#f5f8fb)}
+.featuredCategory .categoryImage{background:radial-gradient(circle at 50% 38%,#fff 0,#edf2f5 68%)}
+.featuredCategory .categoryImage img{object-fit:contain!important;padding:18px!important}
+.featuredCategory h3{font-size:clamp(27px,3vw,38px)}
+
+.rackSection{position:relative;overflow:hidden;background:#040c14;color:#fff;border-top:1px solid #142331}
+.rackSection:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 7%,rgba(23,105,255,.22),transparent 26%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:auto,48px 48px,48px 48px;pointer-events:none}
+.rackSection .container{position:relative}
+.rackHeader{display:grid;grid-template-columns:1.1fr .7fr;gap:64px;align-items:end;margin-bottom:42px}
+.rackHeader h2{font-size:clamp(45px,6vw,78px);line-height:.9;letter-spacing:-.065em;margin:12px 0 0;max-width:880px;text-wrap:balance}
+.rackHeader>div:last-child{padding-bottom:4px}
+.rackHeader p:not(.eyebrow){color:#a8b8c7;line-height:1.75;margin:0 0 19px}
+.lightLink{color:#fff}
+.rackGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rackCard{display:grid;grid-template-rows:auto 1fr;background:#0a1622;border:1px solid rgba(255,255,255,.13);min-width:0;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.rackCard:hover{transform:translateY(-5px);border-color:rgba(123,223,255,.55);box-shadow:0 28px 70px rgba(0,0,0,.3)}
+.rackImage{position:relative;aspect-ratio:1/1;overflow:hidden;background:linear-gradient(145deg,#f8fafb,#e6ebef)}
+.rackImage img{width:100%;height:100%;object-fit:contain;padding:18px;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.rackCard:hover .rackImage img{transform:scale(1.035)}
+.rackImage span{position:absolute;top:16px;left:16px;display:grid;place-items:center;min-width:58px;height:58px;padding:0 11px;background:#0b63f6;color:#fff;font-size:20px;font-weight:900;letter-spacing:-.04em;box-shadow:0 14px 30px rgba(11,99,246,.25)}
+.rackCardTall{border-color:rgba(63,130,255,.48)}
+.rackCardTall .rackImage span{background:#fff;color:#07131f}
+.rackCardBody{padding:24px 25px 27px;display:flex;flex-direction:column;align-items:flex-start}
+.rackCardBody small{color:#7bdfff;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.rackCardBody h3{font-size:25px;line-height:1.02;letter-spacing:-.045em;margin:13px 0 11px;text-wrap:balance}
+.rackCardBody p{color:#9eb0bf;margin:0 0 24px;font-size:14px;line-height:1.65}
+.rackCardBody b{display:flex;align-items:center;gap:7px;margin-top:auto;font-size:13px}
+.rackBrief{display:grid;grid-template-columns:.65fr repeat(3,1fr) auto;gap:0;align-items:stretch;margin-top:14px;border:1px solid rgba(255,255,255,.14);background:#07131f}
+.rackBrief>span,.rackBrief>div,.rackBrief>a{padding:21px;border-right:1px solid rgba(255,255,255,.12)}
+.rackBrief>span{color:#7bdfff;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+.rackBrief b{font-size:12px}
+.rackBrief p{color:#8fa2b3;font-size:12px;line-height:1.5;margin:6px 0 0}
+.rackBrief .btn{align-self:center;margin:14px;border-right:0;padding:13px 16px;white-space:nowrap}
+
+.recentStockCard img{object-fit:contain!important;padding:22px;background:linear-gradient(145deg,#f8fafb,#e8edf1)}
+.recentStockCard figcaption{border-top:1px solid rgba(8,17,27,.08)}
+.productCard{display:flex;flex-direction:column}
+.productBody{display:flex;flex:1;flex-direction:column}
+.productActions{margin-top:auto!important}
+.productMeta span:last-child{color:#1769ff;font-weight:850}
+.pageHero{background:radial-gradient(circle at 84% 12%,rgba(23,105,255,.12),transparent 26%),linear-gradient(135deg,#eef3f7,#fff)}
+
+@media(max-width:1080px){
+  .featuredCategory{grid-column:span 2}
+  .rackHeader{grid-template-columns:1fr;gap:25px}
+  .rackGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rackBrief{grid-template-columns:1fr 1fr}
+  .rackBrief>span{grid-column:1/-1}
+  .rackBrief .btn{margin:14px;align-self:stretch}
+}
+@media(max-width:760px){
+  .featuredCategory{grid-column:auto;grid-template-columns:112px 1fr}
+  .featuredCategory h3{font-size:21px}
+  .rackHeader h2{font-size:clamp(42px,13vw,58px)}
+  .rackGrid{grid-template-columns:1fr}
+  .rackImage{aspect-ratio:4/3}
+  .rackBrief{grid-template-columns:1fr}
+  .rackBrief>span{grid-column:auto}
+  .rackBrief>span,.rackBrief>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .rackBrief .btn{margin:14px;width:auto}
+}
+@media(prefers-reduced-motion:reduce){.rackCard,.rackImage img{transition:none!important}.rackCard:hover,.rackCard:hover .rackImage img{transform:none!important}}
